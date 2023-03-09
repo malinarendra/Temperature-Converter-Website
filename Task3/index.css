@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* parent container */
+#parent{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100vh;
+}
+
+/* background image before parent container */
+#parent::before{
+    content: " ";
+    background-image: url("back.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+}
+
+/* main div */
+#main{
+    border: 2px solid black;
+    padding: 2rem;
+    max-width: 50%;
+    border-radius: 8px;
+    z-index: 2;
+    background-color: white;
+}
+
+
+/* form styling */
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* heading paragraph of main */
+.heading, .para , .form{
+    margin-bottom: 2rem;
+}
+
+#result h2{
+    margin-bottom: 1rem;
+}
+
+/* type styling */
+#hi{
+    margin-bottom: 8px;
+}
+#d-f-k{
+    margin-bottom: 8px;
+}
+
+/* designing to button */
+#convert{
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 35px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 0px 25px;
+}
+
+button:hover{
+    background-color: rgb(103, 103, 244);
+    color: white;
+}
+
+/* selection */
+select{
+    width: 8rem;
+    height: 31px;
+    border-radius: 5px;
+}
+
+/* heading */
+.heading{
+    text-align: center;
+    font-size: 35px;
+}
+/* paragraph */
+.para{
+    font-size: 20px;
+}
+
+/* input field */
+input{
+    padding: 2px;
+}
+
+/* selected type symbol */
+.i-symbol{
+    font-size: 20px;
+    font: bolder;
+    margin-left: 10px;
+}
+
+/* type select styling */
+.type-select{
+    margin-bottom: 20px;
+}
+
+#change1,#change2,#change3,#re{
+    display: none;
+}
+
+@media screen and (max-width: 670px) {
+    .form{
+        flex-wrap: wrap;
+    }
+    input{
+        width: 76%;
+    }
+    select{
+        width: 10rem;
+    }
+    #left{
+        margin-bottom: 1.5rem;
+    }
+    .heading{
+        font-size: 28px;
+    }
+    .para{
+        font-size: 18px;
+    }
+    #hi,#d-f-k{
+        font-size: 18px;
+    }
+    button{
+        font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 500px){
+    #convert{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #btn{
+        margin-bottom: 1.5rem;
+    }
+    #main{
+        max-width: 70%;
+    }
+  }
